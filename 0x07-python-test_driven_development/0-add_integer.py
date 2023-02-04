@@ -1,15 +1,21 @@
 #!/usr/bin/python3
-add_integer = __import__('0-add_integer').add_integer
+"""
+This is the addition module.
+it adds 2 integers
+a and b must be first casted
+"""
 
-print(add_integer(1, 2))
-print(add_integer(100, -2))
-print(add_integer(2))
-print(add_integer(100.3, -2))
-try:
-    print(add_integer(4, "School"))
-except Exception as e:
-    print(e)
-try:
-    print(add_integer(None))
-except Exception as e:
-    print(e)
+
+def add_integer(a, b=98):
+    """a and are integers
+    Returns an integer: the addition of a and b
+    """
+    if isinstance(a, float):
+        a = int(a)
+    if isinstance(b, float):
+        b = int(b)
+    if not (isinstance(a, int)):
+        raise TypeError("a must be an integer")
+    if not (isinstance(b, int)):
+        raise TypeError("b must be an integer")
+    return (a + b)
