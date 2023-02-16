@@ -139,4 +139,4 @@ class Rectangle(Base):
                 _map[key.split("__")[-1]] = value
             else:
                 _map[key] = value
-        return 
+        return _map
